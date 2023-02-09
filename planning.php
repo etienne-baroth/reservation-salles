@@ -92,20 +92,12 @@ $info_resa = $requete_resa->fetchALL(PDO::FETCH_ASSOC);
                                         $desc = $Hresa["description"];
                                         $id = $Hresa["id"];
 
-
                                         if ($case == $case_resa) { ?>
                                             <td>
                                                 <a href="reservation.php?evenement=<?php echo $id; ?>">
+                                                    <?php echo $login; ?><br>
                                                     <?php echo $titre; ?><br>
-                                                    <?php echo $desc; ?><br>
-                                                    <?php
-                                                    if (isset($_SESSION['login']) && $_SESSION['login'] == 'admin') { ?>
-                                                        <a href="./reservation_delete.php?id=<?php echo $id; ?>"><i class="fa-solid fa-xmark"></i></a>
-                                                    <?php
-                                                    } else {
-                                                        echo "Voir la Réservation";
-                                                    }
-                                                    ?>
+                                                    <?php echo "Voir la Réservation"; ?>
                                                 </a>
                                             </td>
                                         <?php
