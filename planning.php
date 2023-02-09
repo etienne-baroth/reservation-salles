@@ -117,12 +117,12 @@ $info_resa = $requete_resa->fetchALL(PDO::FETCH_ASSOC);
                                     }
                                     if ($case == null) {
                                         ?>
-                                        <td><a href="reservation-form.php?heure_debut=<?php echo $heure; ?>&amp;date_debut=<?php echo $jour; ?>">Réservez ici</a></td>
+                                        <td><a href="reservation-form.php?heure_debut=<?php echo $heure; ?>&amp;date_debut=<?php echo $jour; ?>">Réserver l'horaire</a></td>
                                     <?php
                                     }
                                 } else {
                                     ?>
-                                    <td><a href="reservation-form.php?heure_debut=<?php echo $heure; ?>&amp;date_debut=<?php echo $jour; ?>">Réservez ici</a></td>
+                                    <td><a href="reservation-form.php?heure_debut=<?php echo $heure; ?>&amp;date_debut=<?php echo $jour; ?>">Réserver l'horaire</a></td>
                                 <?php
                                 }
                             } ?>
