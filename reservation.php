@@ -6,7 +6,6 @@ require_once('config.php');
 if (isset($_GET["evenement"]) && !empty($_GET["evenement"])) {
     $id = $_GET["evenement"];
 
-    // $connexionbd = mysqli_connect("localhost", "root", "", "reservationsalles");
     $requete = $database->prepare("SELECT * FROM reservations INNER JOIN utilisateurs ON utilisateurs.id = reservations.id_utilisateur WHERE reservations.id = ? ");
     $requete->execute([$id]);
     $resa = $requete->fetchAll(PDO::FETCH_ASSOC);
@@ -18,10 +17,10 @@ if (isset($_GET["evenement"]) && !empty($_GET["evenement"])) {
     $debut = explode(" ", $resa[0]['debut']);
 
     $H = explode(":", $debut[1]);
-    $heure_debut = $H[0] . ":" . $H[1]; //récupère seulement l'heure dans début      
+    $heure_debut = $H[0] . ":" . $H[1];
 
     $J =  explode("-", $debut[0]);
-    $jour = $J[2] . "-" . $J[1] . "-" . $J[0]; //récupère seuleument la date dans début, mais formter j-m-a                                       
+    $jour = $J[2] . "-" . $J[1] . "-" . $J[0];
 
     $fin = explode(" ", $resa[0]['fin']);
 

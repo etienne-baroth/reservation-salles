@@ -61,7 +61,7 @@ $info_resa = $requete_resa->fetchALL(PDO::FETCH_ASSOC);
 
                 <tbody>
                     <?php
-                    for ($heure = 8; $heure <= 19; $heure++) //génération lignes des heures
+                    for ($heure = 8; $heure <= 19; $heure++)
                     {
                         ?>
                         <tr>
@@ -69,22 +69,22 @@ $info_resa = $requete_resa->fetchALL(PDO::FETCH_ASSOC);
                                 <p><?php echo $heure . "h"; ?></p>
                             </td>
                             <?php
-                            for ($jour = 1; $jour <= 5; $jour++) //génération des cellules sous les jours
+                            for ($jour = 1; $jour <= 5; $jour++)
                         {
 
                                 if (!empty($info_resa)) {
-                                    foreach ($info_resa as $resa => $Hresa) //sépare les réservations
+                                    foreach ($info_resa as $resa => $Hresa)
                                     {
-                                        $JH = explode(" ", $Hresa["debut"]); //sélection la ligne correspondant à l'heure de début
+                                        $JH = explode(" ", $Hresa["debut"]);
 
-                                        $H = explode(":", $JH[1]); //explose l'heure
-                                        $heure_resa = date("G", mktime($H[0], $H[1], $H[2], 0, 0, 0)); //récupère uniquement l'heure sans le 0                  
+                                        $H = explode(":", $JH[1]);
+                                        $heure_resa = date("G", mktime($H[0], $H[1], $H[2], 0, 0, 0));
 
-                                        $J = explode("-", $JH[0]); //explose la date
-                                        $jour_resa = date("N", mktime(0, 0, 0, $J[1], $J[2], $J[0])); //récupère le numéro du jour      
+                                        $J = explode("-", $JH[0]);
+                                        $jour_resa = date("N", mktime(0, 0, 0, $J[1], $J[2], $J[0]));
 
-                                        $case_resa = $heure_resa . $jour_resa; //crée un numéro de réservation                     
-                                        $case = $heure . $jour; //Crée un numéro pour chaque cellules
+                                        $case_resa = $heure_resa . $jour_resa;
+                                        $case = $heure . $jour;
 
 
                                         $titre = $Hresa["titre"];
@@ -110,7 +110,7 @@ $info_resa = $requete_resa->fetchALL(PDO::FETCH_ASSOC);
                                             </td>
                                         <?php
                                             break;
-                                        } else //si pas de correspondance set $case à null pour éviter trop d'affchage
+                                        } else
                                         {
                                             $case = null;
                                         }
