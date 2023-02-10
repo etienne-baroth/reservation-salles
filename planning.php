@@ -4,12 +4,6 @@ require_once('config.php');
 
 // var_dump($_SESSION);
 
-// $getUser = $database->prepare('SELECT* FROM reservations');
-
-// $getUser->execute();
-
-// $reservation = $getUser->fetch();
-
 $requete_resa = $database->prepare("SELECT * FROM utilisateurs INNER JOIN reservations ON utilisateurs.id = reservations.id_utilisateur WHERE week(debut) = week(curdate())");
 $requete_resa->execute();
 $info_resa = $requete_resa->fetchALL(PDO::FETCH_ASSOC);

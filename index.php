@@ -41,7 +41,7 @@ require_once('config.php');
 
 <main>
 
-<h1>Bienvenue sur notre site de réservation de salles <?php if (isset($_SESSION["utilisateur"]["login"])) {echo $_SESSION["utilisateur"]["login"];} ?> ! Vous pouvez accéder au GitHub du site <a href="https://github.com/etienne-baroth/livre-or" target="_blank"> ici</a></h1>
+<h1>Bienvenue sur notre site de réservation de salles <?php if (isset($_SESSION["utilisateur"]["login"])) {echo $_SESSION["utilisateur"]["login"];} ?> ! Vous pouvez accéder au GitHub du site <a href="https://github.com/etienne-baroth/reservation-salles" target="_blank"> ici</a></h1>
 
 </main>
 
