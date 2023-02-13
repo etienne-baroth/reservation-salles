@@ -58,7 +58,7 @@ if (isset($_GET["evenement"]) && !empty($_GET["evenement"])) {
 
 <main>
         <section>
-            <h1>Réserver par <u><?php echo $login; ?></u></h1>
+            <h1>Réservé par <u><?php echo $login; ?></u></h1>
             <p>Le <?php echo $jour ?> de <?php echo $heure_debut; ?> à <?php echo $heure_fin; ?></p>
             <hr>
             <section>
