@@ -80,6 +80,9 @@ if(isset($_POST['submit'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="ressources/favicon.png">
 </head>
@@ -88,10 +91,10 @@ if(isset($_POST['submit'])) {
 <header>
 
 <div class="header-nav">
-    <div class="header-title"><a href="index.php">CLASSROOMS</a></div>
+    <div class="header-title"><a class="header-title-solo" href="index.php">CLASSROOMS</a></div>
 
     <div class="header-btn">
-        <p id="btn1"><a href="inscription.php">Nouveau compte</a></p>
+        <p><a class="header-btn-solo-last" href="inscription.php">Nouveau compte &#x270e</a></p>
     </div>
 </div>
 
@@ -104,7 +107,7 @@ if(isset($_POST['submit'])) {
 <form class="form" method="post" action="">
     <input type="text" name="login" placeholder="Login" autocomplete="off">
     <input type="password" name="mdp" placeholder="Mot de passe" autocomplete="off">
-    <input id="submit_btn" type="submit" name="submit" value="Validation">
+    <input class="submit_btn" type="submit" name="submit" value="Validation">
 </form>
 
 <div class="error">
@@ -114,7 +117,13 @@ if(isset($_POST['submit'])) {
 </main>
 
 <footer>
-    
+
+    <div class="footer-names">
+
+        <p>Etienne & Miguel Création</p>
+
+    </div>
+
 </footer>
 
 </body>

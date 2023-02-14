@@ -50,6 +50,9 @@ if(isset($_POST["submit"])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="ressources/favicon.png">
 </head>
@@ -58,13 +61,12 @@ if(isset($_POST["submit"])) {
 <header>
 
 <div class="header-nav">
-    <div class="header-title"><a href="index.php">CLASSROOMS</a></div>
+    <div class="header-title"><a class="header-title-solo" href="index.php">CLASSROOMS</a></div>
 
     <div class="header-btn">
-        <p id="btn1"><a href="planning.php">Planning</a></p>
-        <!-- <p id="btn1"><a href="reservation.php">Informations de Réservation</a></p> -->
-        <p id="btn1"><a href="reservation-form.php">Formulaire de Réservation</a></p>
-        <p id="btn3"><a href="logout.php">Déconnexion</a></p>
+        <p><a class="header-btn-solo" href="planning.php">Planning 🧾</a></p>
+        <p><a class="header-btn-solo" href="reservation-form.php">Formulaire de Réservation &#x2709</a></p>
+        <p><a class="header-btn-solo-last" href="logout.php">Déconnexion ⛌</a></p>
     </div>
 </div>
 
@@ -76,14 +78,14 @@ if(isset($_POST["submit"])) {
 
 <div>
 
-<form class="form" method="post" action="">
+<form class="form_profil" method="post" action="">
     <label for="Nouveau Login">Nouveau Login</label>
-    <input type="text" name="newlogin" value="<?php echo $_SESSION["utilisateur"]["login"] ?>" autocomplete="off">
+    <input class="input_profil" type="text" name="newlogin" value="<?php echo $_SESSION["utilisateur"]["login"] ?>" autocomplete="off">
     <label for="Nouveau Mot de Passe">Nouveau Mot de Passe</label>
-    <input type="password" name="newmdp"  autocomplete="off">
+    <input class="input_profil" type="password" name="newmdp"  autocomplete="off">
     <label for="Nouveau Mot de Passe Conf">Confirmation Nouveau Mot de Passe</label>
-    <input type="password" name="newmdpconf" autocomplete="off">
-    <input id="submit_btn" type="submit" name="submit" value="Modifier">
+    <input class="input_profil" type="password" name="newmdpconf" autocomplete="off">
+    <input class="submit_btn" type="submit" name="submit" value="Modifier">
 </form>
 
 </div>
@@ -91,6 +93,12 @@ if(isset($_POST["submit"])) {
 </main>
 
 <footer>
+
+    <div class="footer-names">
+
+        <p>Etienne & Miguel Création</p>
+
+    </div>
 
 </footer>
 
