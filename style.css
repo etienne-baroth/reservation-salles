@@ -1,0 +1,14 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --nav-color: #080F0F;
+    --bg-color: #F3E9DC;
+}
+
+body {
+    background-color: var(--bg-color);
+}
