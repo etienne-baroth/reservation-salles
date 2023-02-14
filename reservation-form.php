@@ -65,34 +65,44 @@ if (isset($_POST["submit"]) && !empty($_POST["titre"]) && !empty($_POST["descrip
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire de Réservation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="ressources/favicon.png">
 </head>
 <body>
 
 <header>
 
 <div class="header-nav">
-    <div class="header-title"><a href="index.php">CLASSROOMS</a></div>
+    <div class="header-title"><a class="header-title-solo" href="index.php">CLASSROOMS</a></div>
 
     <div class="header-btn">
-        <p id="btn1"><a href="planning.php">Planning</a></p>
-        <p id="btn2"><a href="profil.php">Modifier Profil</a></p>
-        <p id="btn3"><a href="logout.php">Déconnexion</a></p>
+        <p><a class="header-btn-solo" href="planning.php">Planning 🧾</a></p>
+        <p><a class="header-btn-solo" href="profil.php">Modifier Profil 🕶</a></p>
+        <p><a class="header-btn-solo-last" href="logout.php">Déconnexion ⛌</a></p>
     </div>
 </div>
 
 </header>
 
+<main>
+
 <div>
         <main>
-            <h1>Formulaire de Réservation</h1>
+            <h1 id="reservation_title">Formulaire de Réservation</h1>
 
             <h2>Utilisateur : <?php echo $_SESSION["utilisateur"]["login"] ?> </h2>
 
-            <form action="reservation-form.php" method="POST">
+            <form class="form_reservation" action="reservation-form.php" method="POST">
                 <label for="titre">Titre</label>
-                <input type="text" id="titre" name="titre" required>
+                <input type="text" name="titre" required>
                 <label for="description">Description</label>
-                <input type="text" id="description" name="description" required>
+                <input type="text" name="description" required>
 
                 <label for="debut">Date de Début</label>
                 <?php
@@ -208,7 +218,7 @@ if (isset($_POST["submit"]) && !empty($_POST["titre"]) && !empty($_POST["descrip
                 </select>
                 <br>
                 
-                <input type="submit" name="submit" class="button" value="Valider ma Réservation">
+                <input class="submit_btn" type="submit" name="submit" value="Valider ma Réservation">
 
                 <?php
                 if (isset($msg_error)) {
@@ -221,6 +231,18 @@ if (isset($_POST["submit"]) && !empty($_POST["titre"]) && !empty($_POST["descrip
             </form>
         </main>
     </div>
+
+</main>
+
+<footer>
+
+    <div class="footer-names">
+
+        <p>Etienne & Miguel Création</p>
+
+    </div>
+
+</footer>
 
 </body>
 </html>

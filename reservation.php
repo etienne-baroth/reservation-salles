@@ -38,40 +38,58 @@ if (isset($_GET["evenement"]) && !empty($_GET["evenement"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="ressources/favicon.png">
 </head>
 <body>
 
 <header>
 
 <div class="header-nav">
-    <div class="header-title"><a href="index.php">CLASSROOMS</a></div>
+    <div class="header-title"><a class="header-title-solo" href="index.php">CLASSROOMS</a></div>
 
     <div class="header-btn">
-        <p id="btn1"><a href="planning.php">Planning</a></p>
-        <p id="btn1"><a href="reservation-form.php">Formulaire de Réservation</a></p>
-        <p id="btn2"><a href="profil.php">Modifier Profil</a></p>
-        <p id="btn3"><a href="logout.php">Déconnexion</a></p>
+        <p><a class="header-btn-solo" href="planning.php">Planning 🧾</a></p>
+        <p><a class="header-btn-solo" href="reservation-form.php">Formulaire de Réservation &#x2709</a></p>
+        <p><a class="header-btn-solo" href="profil.php">Modifier Profil 🕶</a></p>
+        <p><a class="header-btn-solo-last" href="logout.php">Déconnexion ⛌</a></p>
     </div>
 </div>
 
 </header>
 
-<main>
+    <main>
         <section>
             <h1>Réservé par <u><?php echo $login; ?></u></h1>
             <p>Le <?php echo $jour ?> de <?php echo $heure_debut; ?> à <?php echo $heure_fin; ?></p>
             <hr>
             <section>
-                <p><u>Titre</u> :</p>
+                <h3><u>Titre</u> :</h3>
                 <p><?php echo $titre; ?></p>
             </section>
             <hr>
             <section>
-                <p><u>Description</u> :</p>
+                <h3><u>Description</u> :</h3>
                 <p><?php echo $description; ?></p>
             </section>
 
         </section>
     </main>
+
+<footer>
+
+    <div class="footer-names">
+
+        <p>Etienne & Miguel Création</p>
+
+    </div>
+
+</footer>
 
 </body>

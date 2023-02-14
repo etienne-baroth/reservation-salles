@@ -17,18 +17,26 @@ $info_resa = $requete_resa->fetchALL(PDO::FETCH_ASSOC);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="ressources/favicon.png">
 </head>
 <body>
 
 <header>
 
 <div class="header-nav">
-    <div class="header-title"><a href="index.php">CLASSROOMS</a></div>
+    <div class="header-title"><a class="header-title-solo" href="index.php">CLASSROOMS</a></div>
 
     <div class="header-btn">
-        <p id="btn1"><a href="reservation-form.php">Formulaire de Réservation</a></p>
-        <p id="btn2"><a href="profil.php">Modifier Profil</a></p>
-        <p id="btn3"><a href="logout.php">Déconnexion</a></p>
+        <p><a class="header-btn-solo" href="reservation-form.php">Formulaire de Réservation &#x2709</a></p>
+        <p><a class="header-btn-solo" href="profil.php">Modifier Profil 🕶</a></p>
+        <p><a class="header-btn-solo-last" href="logout.php">Déconnexion ⛌</a></p>
     </div>
 </div>
 
@@ -38,7 +46,7 @@ $info_resa = $requete_resa->fetchALL(PDO::FETCH_ASSOC);
 
 <div>
 
-    <h1>Planning <?php echo $day_week = date('Y', time()); ?></h1>
+    <h1 class="planning_title">Planning <?php echo $day_week = date('Y', time()); ?></h1>
     <h2>Semaine <?php echo $day_week = date('W', time()); ?></h2>
             
         <table>
@@ -88,7 +96,7 @@ $info_resa = $requete_resa->fetchALL(PDO::FETCH_ASSOC);
 
                                         if ($case == $case_resa) { ?>
                                             <td>
-                                                <a href="reservation.php?evenement=<?php echo $id; ?>">
+                                                <a class="reservation_date" href="reservation.php?evenement=<?php echo $id; ?>">
                                                     <?php echo $login; ?><br>
                                                     <?php echo $titre; ?><br>
                                                     <?php echo "Voir la Réservation"; ?>
@@ -103,12 +111,12 @@ $info_resa = $requete_resa->fetchALL(PDO::FETCH_ASSOC);
                                     }
                                     if ($case == null) {
                                         ?>
-                                        <td><a href="reservation-form.php?heure_debut=<?php echo $heure; ?>&amp;date_debut=<?php echo $day; ?>">Réserver l'horaire</a></td>
+                                        <td><a class="reservation_date" href="reservation-form.php?heure_debut=<?php echo $heure; ?>&amp;date_debut=<?php echo $day; ?>">Réserver</a></td>
                                     <?php
                                     }
                                 } else {
                                     ?>
-                                    <td><a href="reservation-form.php?heure_debut=<?php echo $heure; ?>&amp;date_debut=<?php echo $day; ?>">Réserver l'horaire</a></td>
+                                    <td><a class="reservation_date" href="reservation-form.php?heure_debut=<?php echo $heure; ?>&amp;date_debut=<?php echo $day; ?>">Réserver</a></td>
                                 <?php
                                 }
                             } ?>
@@ -122,6 +130,16 @@ $info_resa = $requete_resa->fetchALL(PDO::FETCH_ASSOC);
     </div>
 
 </main>
+
+<footer>
+
+    <div class="footer-names">
+
+        <p>Etienne & Miguel Création</p>
+
+    </div>
+
+</footer>
 
 </body>
 </html>
