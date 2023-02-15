@@ -2,7 +2,7 @@
 
 require_once('config.php');
 
-// var_dump($_SESSION);
+
 
 if (isset($_POST["submit"]) && !empty($_POST["titre"]) && !empty($_POST["description"]) && !empty($_POST["debut_date"]) && !empty($_POST["debut_heure"]) && !empty($_POST["fin_date"]) && !empty($_POST["fin_heure"])) {
         $debut = $_POST["debut_date"] . " " . $_POST["debut_heure"];

@@ -2,7 +2,6 @@
 
 require_once('config.php');
 
-// var_dump($_SESSION);
 
 $requete_resa = $database->prepare("SELECT * FROM utilisateurs INNER JOIN reservations ON utilisateurs.id = reservations.id_utilisateur WHERE week(debut) = week(curdate())");
 $requete_resa->execute();
